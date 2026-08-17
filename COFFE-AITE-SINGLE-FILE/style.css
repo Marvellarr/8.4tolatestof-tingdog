@@ -1,0 +1,201 @@
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+body{
+background-color: #F6EFE4;
+color: #333;
+text-align: left;
+font-family: Arial, Helvetica, sans-serif;
+}
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    flex: 1;
+    position: fixed;
+    width: 100%;
+    padding: 20px 60px;
+    box-sizing: border-box;
+    background-color: #F6EFE4;
+    box-shadow: 0 2px 10px #AF7945;
+    z-index: 500;
+    top: 0px;
+    left: 0px;
+}
+#logo{/*FOR THE LOGO*/
+    letter-spacing: 2px;
+    font-size: 24px;
+    margin: 0;
+}
+#oak{
+    color: #AF7945;
+}
+nav{
+    display: flex;
+}
+nav a{
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    margin-left: 30px;
+    transition: 0.3s;
+    font-weight: bold;
+
+}
+nav a:hover{
+    color: #AF7945;
+}
+.section1{
+position: relative;
+    padding-top: 200px; /* pushes content down for real, no overlap */
+    width: 100%;
+    box-sizing: border-box;
+    height: 300px;
+    background-color: #F6EFE4;
+}
+
+h1{
+    font-size: 48px;
+    text-align: left;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+#motto{
+    color: #AF7945;
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+.home-section {
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 40px;
+width: 100%;
+}
+.home-text {
+    width: 50%;
+}
+img {
+    width: 100%;
+    height: 500px;
+    
+}
+.home-image{
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(206, 137, 137, 0.1);
+    overflow: hidden
+}
+.buttonlink1{
+    background-color: #AF7945;
+    border-radius: 10px;
+    height: 3rem;
+    display: inline-block;
+    border: none;
+    text-decoration: none;
+    padding: 0 20px;
+    line-height: 3rem; 
+    font-weight: bold;
+    margin-right: 10px;
+    transition: 0.3s;
+}
+.buttonlink1:hover{
+    background-color: #5a320e;
+    
+
+}
+.buttonlink2{
+    background-color: rgb(200, 187, 187);
+    border-radius: 10px;
+    height: 3rem;
+    display: inline-block;
+    border: none;
+    text-decoration: none;
+    padding: 0 20px;
+    line-height: 3rem; 
+    font-weight: bold;
+    margin-right: 10px;
+    transition: 0.3s;
+}
+.buttonlink2.buttonlink2:hover{
+    background-color: #5a320e;
+    
+
+}
+
+/* ============ SECTION 2: FEATURED BEANS ============ */
+
+.about-us-section{
+    background-color: #ECE1CF;
+    width: 100%;
+    box-sizing: border-box;
+    position: absolute;
+    top: 700px;
+
+    /* FIX: removed "position: relative; top: 500px;".
+       top only moves an element visually — on a position:relative
+       element, its original empty space stays reserved where it
+       WAS, so the box appears to overlap whatever comes after it.
+       margin-top gives real spacing instead, no leftover gap. */
+    margin-top: 60px;
+
+    /* FIX: removed the fixed "height: 600px;". A fixed height forces
+       the box to stay that size no matter how much content is
+       inside — text can get cut off, or you get big empty space.
+       Padding lets the box grow to fit whatever's inside it. */
+    padding: 60px 40px;
+
+    border-radius: 1rem;
+}
+
+#section2-head{
+    color: #333;
+    font-size: 45px;
+    text-align: left;
+}
+
+#section2-paragraph{
+    color: #AF7945;
+    text-align: left;
+}
+
+.imagesection{
+    display: grid;
+
+    /* FIX: "display: grid;" alone doesn't create columns — without
+       grid-template-columns, everything just stacks in ONE column,
+       top to bottom, instead of side by side. This line tells the
+       grid to make 3 equal-width columns. */
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px; /* space between the 3 cards, so they don't touch */
+}
+
+/* FIX: replaced .image1 / .image2 / .image3 — three separate
+   classes with the exact same rules copy-pasted three times — with
+   ONE shared class used on all three images.
+   Also swapped fixed pixel width/height (200px / 350px) for
+   something that scales: width:100% fills whatever column it sits
+   in, object-fit:cover crops neatly to a fixed height instead of
+   stretching or squishing the photo. */
+.card-img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* FIX: replaced "#imagebutton1" (an id repeated on 3 buttons, which
+   isn't allowed — ids must be unique) with a class called ".tag"
+   used on a <span> instead of a <button>, since it's just a label,
+   not something clickable. */
+.tag{
+    display: inline-block;
+    background-color: #4B6B4A;
+    color: white;
+    border-radius: 2rem;
+    padding: 4px 14px;
+    font-size: 14px;
+    margin-top: 8px;
+}

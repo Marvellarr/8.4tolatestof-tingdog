@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>coffe-site-single-file</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="container">
+    
+        <h2 id="logo">Ember<span id="oak"> & Oak</span></h2>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#menu">Menu</a>
+            <a href="#about">About</a>
+            <a href="#gallary">Gallary</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <section id="home" class="section1">
+        <div id="home-section" class="home-section">
+            <div class="home-text">
+                <p id="motto">Small-batch · Roasted weekly</p>
+                <h1>Coffee that tastes like where it came from.</h1>
+                <p>We roast in 12kg batches, twice a week, and put the farm's name on every bag. No blends that hide where the beans grew — just honest, single-origin coffee from growers we've met in person.</p>
+                <a href="#menu" class="buttonlink1">SEE OUR SERVICE</a>
+                <a href="#about" class="buttonlink2">OUR STORY</a>
+            </div>
+
+            <div class="home-image" >
+                <img src="../WEBSITE-IMAGES/home-image.jpg" alt="coffee-image">
+            </div>
+        </div>
+    </section>
+    <!-- ============ SECTION 2: FEATURED BEANS ============ -->
+<section>
+    <div class="about-us-section" id="about-us-secton">
+
+        <!-- FIX: fixed the typo "setion2" -> "section2" -->
+        <p id="section2-paragraph">This week's roast</p>
+
+        <!-- FIX: changed <h1> to <h2>. A page should only have ONE
+             <h1> — that's its single main title (used once, in the
+             hero section above). Every heading after that should
+             step down: h2, then h3, and so on. Two <h1>s confuses
+             the page's outline. -->
+        <h2 id="section2-head">Featured beans</h2>
+
+        <div class="imagesection">
+
+            <div class="section2-image1">
+                <!--
+                  FIX 1: gave this image a real, describing alt text
+                  instead of leaving it empty — alt should describe
+                  what's IN the picture, mainly for screen readers.
+                  FIX 2: replaced .image1/.image2/.image3 (three
+                  separate classes styled IDENTICALLY) with ONE
+                  shared class "card-img" — no reason to repeat the
+                  same CSS three times when it's the same style.
+                -->
+                <img class="card-img" src="WEBSITE-IMAGES/home-image.jpg" alt="Bag of coffee from Yirgacheffe">
+
+                <!--
+                  FIX: changed <button id="imagebutton1"> to
+                  <span class="tag">.
+                  Two problems the old code had:
+                  1. A <button> means "clicking this does something."
+                     This is just a label, not a clickable action —
+                     wrong tag for the job.
+                  2. id="imagebutton1" was repeated on all 3 buttons.
+                     An id must be UNIQUE — only one element per page
+                     may use it. Use a class when you want to reuse
+                     the same style on several elements.
+                -->
+                <span class="tag">Ethiopia</span>
+                <p>Yirgacheffe</p>
+                <p>Floral, jasmine-forward, bright citrus finish.</p>
+            </div>
+
+            <div class="section2-image1">
+                <img class="card-img" src="WEBSITE-IMAGES/home-image.jpg" alt="Bag of coffee from Huila">
+                <span class="tag">Colombia</span>
+                <!-- FIX: this card had the exact same text as card 1
+                     (copy-paste). Gave each card its own content so
+                     all three cards actually show different beans. -->
+                <p>Huila Reserve</p>
+                <p>Caramel sweetness, red apple, soft cocoa body.</p>
+            </div>
+
+            <div class="section2-image1">
+                <img class="card-img" src="WEBSITE-IMAGES/home-image.jpg" alt="Bag of coffee from Sumatra">
+                <span class="tag">Sumatra</span>
+                <p>Mandheling</p>
+                <p>Earthy, low acid, dark chocolate and cedar.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+</body>
+</html>
